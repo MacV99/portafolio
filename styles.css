@@ -1,0 +1,119 @@
+html {
+    scroll-behavior: smooth;
+    font-family: monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+a,
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+section {
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10%;
+    gap: 10px;
+    color: rgb(48, 48, 48);
+}
+
+
+/* FLEX HORIZONTAL */
+section#SocialNetworks ul,
+section#Projects ul {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* FLEX VERTICAL */
+section#Projects ul a,
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ABOUT ME */
+section#AboutMe img {
+    width: 200px;
+    border-radius: 12px;
+}
+
+section#AboutMe p {
+    text-align: center;
+    width: 95%;
+}
+
+
+/* PROYECTS */
+section#Projects {
+    background-color: antiquewhite;
+}
+
+section#Projects ul {
+    gap: 20px;
+    padding: 20px;
+    width: 95%;
+    overflow-x: auto;
+    mask: linear-gradient(to left, transparent 0%, white 2%, white 98%, transparent 100%);
+}
+
+section#Projects ul a {
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: rgb(48, 48, 48);
+    transition: 0.3s;
+}
+
+section#Projects ul img {
+    width: 150px;
+    height: 150px;
+    border: solid 1px rgb(48, 48, 48);
+    border-radius: 12px;
+    background-color: white;
+}
+
+section#Projects ul a:hover,
+section#SocialNetworks ul i:hover {
+    transform: scale(1.06);
+}
+
+/* SCROLLBAR MY PROJECTS */
+section#Projects ul::-webkit-scrollbar {
+    background: transparent;
+    height: 10px;
+}
+
+section#Projects ul::-webkit-scrollbar-track {
+    margin-inline: 50px;
+}
+
+section#Projects ul::-webkit-scrollbar-thumb {
+    background: rgba(48, 48, 48, 0.765);
+    border-radius: 12px;
+}
+
+
+/* SOCIAL NETWORKS */
+
+section#SocialNetworks ul a {
+    margin: 10px 15px;
+}
+
+section#SocialNetworks ul a i {
+    font-size: 50px;
+    color: rgb(48, 48, 48);
+    transition: 0.3s;
+}
