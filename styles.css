@@ -15,7 +15,12 @@ h1 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 25px;
+    text-align: center;
+}
+
+p{
+    font-size: 15px;
 }
 
 a,
@@ -27,7 +32,7 @@ ul {
 section {
     align-items: center;
     justify-content: center;
-    padding: 40px 10%;
+    padding: 40px 5%;
     gap: 10px;
     color: rgb(48, 48, 48);
 }
@@ -63,7 +68,7 @@ section#AboutMe p {
 
 /* PROYECTS */
 section#Projects {
-    background-color: antiquewhite;
+    background-color: rgb(237, 238, 255);
 }
 
 section#Projects ul {
@@ -71,7 +76,7 @@ section#Projects ul {
     padding: 20px;
     width: 95%;
     overflow-x: auto;
-    mask: linear-gradient(to left, transparent 0%, white 2%, white 98%, transparent 100%);
+    mask: linear-gradient(to left, transparent 0%, white 1.2%, white 98.8%, transparent 100%);
 }
 
 section#Projects ul a {
@@ -80,14 +85,16 @@ section#Projects ul a {
     cursor: pointer;
     color: rgb(48, 48, 48);
     transition: .18s;
+    gap: 7px;
 }
 
 section#Projects ul img {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 280px;
     border: solid 1px rgb(48, 48, 48);
     border-radius: 12px;
     background-color: rgb(255, 255, 255);
+    object-fit: cover;
 }
 
 section#Projects ul a:hover,
