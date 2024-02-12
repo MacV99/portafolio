@@ -11,6 +11,11 @@ html {
 
 h1 {
     font-size: 35px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
 }
 
 a,
@@ -74,7 +79,7 @@ section#Projects ul a {
     justify-content: center;
     cursor: pointer;
     color: rgb(48, 48, 48);
-    transition: 0.3s;
+    transition: .18s;
 }
 
 section#Projects ul img {
@@ -82,12 +87,13 @@ section#Projects ul img {
     height: 150px;
     border: solid 1px rgb(48, 48, 48);
     border-radius: 12px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 section#Projects ul a:hover,
 section#SocialNetworks ul i:hover {
-    transform: scale(1.06);
+    transform: scale(1.09);
+    transition: .4s;
 }
 
 /* SCROLLBAR MY PROJECTS */
@@ -101,8 +107,12 @@ section#Projects ul::-webkit-scrollbar-track {
 }
 
 section#Projects ul::-webkit-scrollbar-thumb {
-    background: rgba(48, 48, 48, 0.765);
+    background: rgba(48, 48, 48, .765);
     border-radius: 12px;
+}
+
+section#Projects ul::-webkit-scrollbar-thumb:hover {
+    background: rgba(76, 76, 76, 0.765);
 }
 
 
@@ -115,5 +125,5 @@ section#SocialNetworks ul a {
 section#SocialNetworks ul a i {
     font-size: 50px;
     color: rgb(48, 48, 48);
-    transition: 0.3s;
+    transition: .3s;
 }
