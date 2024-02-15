@@ -91,7 +91,7 @@ section#Projects ul a {
 section#Projects ul img {
     width: 250px;
     height: 280px;
-    border: solid 1px rgb(48, 48, 48);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     border-radius: 12px;
     background-color: rgb(255, 255, 255);
     object-fit: cover;
@@ -134,3 +134,7 @@ section#SocialNetworks ul a i {
     color: rgb(48, 48, 48);
     transition: .3s;
 }
+
+
+
+
