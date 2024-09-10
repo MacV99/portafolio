@@ -1,0 +1,149 @@
+html {
+    scroll-behavior: smooth;
+    font-family: monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px
+}
+
+a,
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+section {
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10%;
+    gap: 10px;
+    color: #1e201f;
+}
+
+
+/* FLEX HORIZONTAL */
+section#SocialNetworks ul,
+section#Projects ul {
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+}
+
+
+/* FLEX VERTICAL */
+section#Projects ul li,
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ABOUT ME */
+section#AboutMe img {
+    width: 200px;
+    border-radius: 12px;
+}
+
+section#AboutMe hr {
+    background-color: #585858;
+    border: #585858;
+    width: 100%;
+    height: 1px;
+}
+
+section#AboutMe h1 {
+    color: #de243a;
+}
+
+section#AboutMe p {
+    text-align: center;
+    width: 95%;
+}
+
+/* SOCIAL NETWORKS */
+
+section#AboutMe ul a {
+    margin: 10px 15px;
+}
+
+section#AboutMe ul a i {
+    font-size: 50px;
+    color: #1e201f;
+    transition: 0.3s;
+}
+
+section#AboutMe ul i:hover {
+    transform: rotate(15deg);
+    color: #de243a;
+}
+
+
+/* PROYECTS */
+section#Projects {
+    background-color: #1e201f;
+    color: #de243a;
+}
+
+section#Projects ul {
+    gap: 20px;
+    padding: 20px;
+    width: 95%;
+    overflow-x: auto;
+    /* mask: linear-gradient(to left, transparent 0%, white 2%, white 98%, transparent 100%); */
+}
+
+section#Projects ul li {
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    gap: 5px;
+    scroll-snap-align: center;
+}
+
+section#Projects ul img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    background-color: white;
+    padding: 10px;
+    object-fit: contain;
+}
+
+section#Projects ul li:hover {
+    transform: scale(1.06);
+    color: #de243a;
+}
+
+/* SCROLLBAR MY PROJECTS */
+section#Projects ul::-webkit-scrollbar {
+    background: transparent;
+    height: 10px;
+}
+
+section#Projects ul::-webkit-scrollbar-track {
+    margin-inline: 50px;
+}
+
+section#Projects ul::-webkit-scrollbar-thumb {
+    background: #585858;
+    border-radius: 12px;
+
+}
+
+section#Projects ul::-webkit-scrollbar-thumb:hover {
+    background: #de243a;
+}
