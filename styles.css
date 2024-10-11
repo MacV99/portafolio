@@ -3,6 +3,16 @@ html {
     font-family: monospace;
 }
 
+body {
+    background-image: url(./img/darksmoke.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +22,10 @@ html {
 h1 {
     font-size: 40px;
     text-align: center;
+}
+
+h2 {
+    font-size: 21px;
 }
 
 p {
@@ -35,7 +49,7 @@ section {
 
 /* FLEX HORIZONTAL */
 section#SocialNetworks ul,
-section#Projects ul {
+ul.slider {
     display: flex;
     flex-direction: row;
     scroll-snap-type: x mandatory;
@@ -43,7 +57,7 @@ section#Projects ul {
 
 
 /* FLEX VERTICAL */
-section#Projects ul li,
+ul.slider li,
 section {
     display: flex;
     flex-direction: column;
@@ -51,20 +65,31 @@ section {
 
 
 /* ABOUT ME */
+
+#AboutMe,
+#education-certification,
+#personal-skills {
+    background-color: white;
+}
+
 section#AboutMe img {
     width: 200px;
-    border-radius: 12px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 14px #0000009c;
 }
 
-section#AboutMe hr {
+hr {
     background-color: #585858;
     border: #585858;
-    width: 100%;
+    width: 70%;
     height: 1px;
+    margin: 7px 0px;
 }
 
-section#AboutMe h1 {
-    color: #de243a;
+section#AboutMe h1,
+#education-certification h1,
+#personal-skills h1 {
+    color: black;
 }
 
 section#AboutMe p {
@@ -81,69 +106,200 @@ section#AboutMe ul a {
 section#AboutMe ul a i {
     font-size: 50px;
     color: #1e201f;
-    transition: 0.3s;
+    transition: .3s ease;
 }
 
 section#AboutMe ul i:hover {
     transform: rotate(15deg);
-    color: #de243a;
+    color: #812e36;
+}
+
+section#skills h1 {
+    color: white;
 }
 
 
 /* PROYECTS */
-section#Projects {
-    background-color: #1e201f;
-    color: #de243a;
+.slider {
+    width: 150px;
 }
 
-section#Projects ul {
+ul.slider {
     gap: 20px;
     padding: 20px;
-    width: 95%;
+    padding-top: 7px;
     overflow-x: auto;
     /* mask: linear-gradient(to left, transparent 0%, white 2%, white 98%, transparent 100%); */
 }
 
-section#Projects ul li {
+section ul.slider li {
     align-items: center;
     justify-content: center;
     cursor: pointer;
     color: white;
-    transition: 0.3s;
+    transition: 0.7s ease;
     gap: 5px;
     scroll-snap-align: center;
 }
 
-section#Projects ul img {
+ul.slider img {
     width: 150px;
     height: 150px;
-    border-radius: 12px;
-    background-color: white;
-    padding: 10px;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.082);
+    backdrop-filter: blur(3.5px);
+    padding: 14px;
     object-fit: contain;
+    border: solid 1px white;
+    transition: .7s ease;
+    cursor: default;
 }
 
-section#Projects ul li:hover {
-    transform: scale(1.06);
-    color: #de243a;
+ul.slider img:hover {
+    background-color: rgba(255, 255, 255, 0.932);
+
 }
 
-/* SCROLLBAR MY PROJECTS */
-section#Projects ul::-webkit-scrollbar {
+ul.slider::-webkit-scrollbar {
     background: transparent;
     height: 10px;
 }
 
-section#Projects ul::-webkit-scrollbar-track {
+ul.slider::-webkit-scrollbar-track {
     margin-inline: 50px;
 }
 
-section#Projects ul::-webkit-scrollbar-thumb {
+ul.slider::-webkit-scrollbar-thumb {
     background: #585858;
-    border-radius: 12px;
+    border-radius: 14px;
 
 }
 
-section#Projects ul::-webkit-scrollbar-thumb:hover {
-    background: #de243a;
+ul.slider::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
+/* SECTION PROJECTS */
+#projects {
+    color: white;
+}
+
+#projects ul,
+#education-certification ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+#projects ul a,
+#education-certification ul a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.082);
+    backdrop-filter: blur(3.5px);
+    width: 250px;
+    height: 300px;
+    border-radius: 7px;
+    text-align: center;
+    padding: 21px;
+    overflow: hidden;
+    color: white;
+    transition: .7s ease;
+    border: 1px solid white;
+}
+
+#projects ul a:hover {
+    background-color: transparent;
+}
+
+#projects ul a p {
+    font-size: 15px;
+}
+
+
+#personal-skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.082);
+    border: solid 1px white;
+    padding: 14px;
+    backdrop-filter: blur(7px);
+    gap: 14px;
+    border-radius: 14px;
+    flex-wrap: wrap;
+    max-width: 770px;
+}
+
+#personal-skills li {
+    text-align: center;
+    font-size: 21px;
+    color: white;
+    text-transform: uppercase;
+    padding: 7px;
+    /* border: 1px solid white; */
+    border-radius: 7px;
+    width: max-content;
+    transition: .3s ease;
+    cursor: default;
+}
+
+#personal-skills li:hover {
+    background-color: rgba(255, 255, 255, 0.274);
+}
+
+#education-certification h1 {
+    color: black !important;
+}
+
+#education-certification ul a {
+    color: black;
+    border: solid 1px;
+    width: max-content;
+    height: max-content;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    transition: .3s ease;
+}
+
+#education-certification ul a:hover {
+    background-color: #0f0f0f;
+    color: white;
+}
+
+/* DESKTOP SCREENS */
+@media (min-width: 800px) {
+    .slider {
+        width: 70%;
+        justify-content: center;
+    }
+
+    section#AboutMe p {
+        width: 70% !important;
+    }
+
+    .autoShow {
+        animation: autoShowAnimation both;
+        animation-timeline: view(100% 5%);
+    }
+
+    @keyframes autoShowAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(200px) scale(0.3);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
 }
